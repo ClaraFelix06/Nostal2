@@ -1,0 +1,159 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.nostal2-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 1rem 1.5rem;
+	background: #111827;
+	color: #ffffff;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+	text-align: center;
+}
+
+.nostal2-header .logo {
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	white-space: nowrap;
+}
+
+.nostal2-header .logo img {
+	display: block;
+	height: 70px;
+	width: auto;
+	max-width: 100%;
+}
+
+.header-search {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: 100%;
+	max-width: 600px;
+}
+
+.header-search-field {
+	position: relative;
+	flex: 1;
+	min-width: 0;
+}
+
+.header-search-icon {
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 18px;
+	height: 18px;
+	pointer-events: none;
+	opacity: 0.9;
+}
+
+.header-search input {
+	width: 100%;
+	padding: 0.75rem 1rem 0.75rem 2.8rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.1);
+	color: #ffffff;
+	outline: none;
+}
+
+.header-search input::placeholder {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.header-search button {
+	padding: 0.75rem 1.1rem;
+	border: 0;
+	border-radius: 999px;
+	background: #00857a;
+	color: #ffffff;
+	font-weight: 600;
+	cursor: pointer;
+	transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.header-search button:hover,
+.header-search button:focus-visible {
+	filter: brightness(1.08);
+	transform: translateY(-1px);
+	outline: none;
+}
+
+.nostal2-header nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 0.75rem;
+}
+
+.nostal2-header nav a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 0.95rem;
+	font-weight: 600;
+	padding: 0.55rem 0.9rem;
+	border-radius: 999px;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nostal2-header nav a:hover,
+.nostal2-header nav a:focus-visible {
+	background: #0c635b;
+	color: #ffffff;
+	outline: none;
+}
+
+body > h2 {
+	max-width: 1100px;
+	margin: 4rem auto 0;
+	padding: 0 1.5rem;
+	font-size: clamp(2rem, 4vw, 3.5rem);
+	line-height: 1.1;
+	text-align: center;
+}
+
+body > p {
+	max-width: 800px;
+	margin: 1.5rem auto 0;
+	padding: 0 1.5rem;
+	font-size: clamp(1rem, 2vw, 1.25rem);
+	line-height: 1.6;
+	text-align: center;
+	color: #555555;
+}
+
+@media (max-width: 768px) {
+	.header-search {
+		max-width: 100%;
+		flex-direction: column;
+	}
+
+	.header-search-field {
+		width: 100%;
+	}
+
+	.header-search button {
+		width: 100%;
+	}
+
+	body > h1 {
+		margin-top: 2.5rem;
+	}
+}
