@@ -96,7 +96,7 @@ body {
 
 .nostal2-header nav {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -127,6 +127,7 @@ body > h2 {
 	font-size: clamp(2rem, 4vw, 3.5rem);
 	line-height: 1.1;
 	text-align: center;
+    color: #111827;
 }
 
 body > p {
@@ -157,3 +158,192 @@ body > p {
 		margin-top: 2.5rem;
 	}
 }
+
+.container {
+	max-width: 1200px;
+	margin: 40px auto;
+	padding: 0 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.boas-vindas {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.boas-vindas h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.boas-vindas p {
+    color: #7a8fa8;
+    margin-top: 5px;
+}
+
+.carousel-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel-item {
+    min-width: 100%;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(17, 24, 39, 0.85);
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 1;
+}
+
+.carousel-button:hover {
+    background: rgba(17, 24, 39, 1);
+}
+
+.carousel-button.prev {
+    left: 16px;
+}
+
+.carousel-button.next {
+    right: 16px;
+}
+
+.novidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.novidades h3 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 30px;
+}
+
+.secao-novidades h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.categoria-bloco {
+    background-color: #111a2e;
+    border-radius: 12px;
+    padding: 8px 15px;
+    margin: 0 20px 30px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: calc(100% - 40px);
+}
+
+.jogos-bloco {
+    background-color: #0D3B66;
+    border: 1px solid rgba(0, 162, 255, 0.2);
+}
+.jogos-bloco h3 {
+    color: #ffffff;
+}
+
+.consoles-bloco {
+    background-color: #F95738;
+    border: 1px solid rgba(255, 90, 0, 0.4);
+}
+.consoles-bloco h3 {
+    color: #ffffff;
+}
+
+.categoria-titulo {
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categoria-titulo h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+.linha-decorativa {
+    display: none;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
+    gap: 20px;
+}
+
+.card-produto {
+    background-color: #0b0f19;
+    border: 1px solid #1c273c;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.card-produto:hover {
+    transform: translateY(-50px); 
+}
+
